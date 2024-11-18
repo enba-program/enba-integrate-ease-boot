@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: fusion-job
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        #        namespace: 0c3ec978-2c51-4ec6-a975-a3ec848b209a
+        access-key: 
+        secret-key: 

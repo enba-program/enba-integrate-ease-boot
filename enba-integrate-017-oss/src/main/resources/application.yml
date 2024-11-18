@@ -1,0 +1,29 @@
+server:
+  port: 8017
+
+spring:
+  application:
+    name: EnbaOss
+
+#阿里云OSS配置
+aliyun:
+  oss:
+    endpoint: oss-cn-beijing.aliyuncs.com
+    access-key-id: LTAI4GKygJj6XJjQ
+    access-key-secret: 3ZJJ2QX2wKQYQWQWQWQWQWQWQWQWQWQWQWQWQWQWQ
+    bucket-name: enba-oss
+    file-host: oss-cn-beijing.aliyuncs.com
+    file-path: /
+    file-domain: http://oss-cn-beijing.aliyuncs.com
+    file-suffix: .jpg,.png,.gif,.jpeg,.bmp,.mp4,.avi,.mp3,.wav,.pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.zip,.rar,.7z,.tar,.gz,.css,.js,.java,.php,.html,.htm,.xml,.json,.java,.jsp,.war,.jar,.exe,.dll,.bat,.sh,.c,.cpp,.h,.cs,.
+    file-max-size: 10
+    file-max-size-unit: MB
+    file-max-count: 1000
+    file-max-count-unit:
+        # 1:天
+        # 2:周
+        # 3:月
+    file-max-count-type: 1
+    file-max-count-time: 1
+    file-max-count-time-unit:
+        # 1:天

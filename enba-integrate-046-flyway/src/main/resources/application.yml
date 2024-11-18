@@ -1,0 +1,43 @@
+server:
+  port: 8046
+
+spring:
+  application:
+    name: @project.artifactId@
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/demo?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+
+  flyway:
+    enabled: true
+    locations:
+      - classpath:db/enba
+    url: jdbc:mysql://127.0.0.1:3306/demo?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    driverClassName: com.mysql.cj.jdbc.Driver
+    user: root
+    password: 123456
+    # 版本更新历史记录表
+    table: t_db_version
+    # 到新的环境中，数据库中有数据，且没有t_db_version表时，是否执行迁移操作
+    # false：在启动时会报错，并停止迁移;
+    # true: 生成history表并完成所有迁移;
+    baseline-on-migrate: true
+    # 在迁移时，是否校验旧脚本有变更
+    validate-on-migrate: true
+    # 检测迁移脚本的路径是否存在，若不存在则抛出异常
+    check-location: false
+    # 禁用Flyway所有drop相关逻辑
+    clean-disabled: true
+    # 验证错误时是否自动清除数据库
+    clean-on-validation-error: false
+
+mybatis-plus:
+  #  global-config:
+  #    db-config:
+  #      id-type: auto
+  #      logic-delete-value: 1
+  #      logic-not-delete-value: 0
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.enba.mybatisplus.entity

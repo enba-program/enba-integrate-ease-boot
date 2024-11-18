@@ -1,0 +1,16 @@
+{
+  "outPath": "./smart-doc",
+  "appToken": "68766876876",
+  "openUrl": "http://127.0.0.1:9999/api",
+  "debugEnvUrl": "http://127.0.0.1:8888",
+  "pathPrefix": "smart-doc",
+  "isStrict": false,
+  "packageFilters": "",
+  "debugEnvName": "开发环境",
+  "style": "xt256",
+  "allInOne": true,
+  "replace": true,
+  "randomMock": true
+}
+
+

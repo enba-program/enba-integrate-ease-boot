@@ -1,0 +1,8 @@
+server:
+  port: 8089
+
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:
+    group: enba-producer-group
+    send-message-timeout: 5000

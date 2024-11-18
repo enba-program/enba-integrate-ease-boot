@@ -1,0 +1,8 @@
+server:
+  port: 8049
+
+spring:
+  application:
+    name: @project.artifactId@
+
+text: c

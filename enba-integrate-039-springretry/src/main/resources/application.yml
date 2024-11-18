@@ -1,0 +1,9 @@
+server:
+  port: 8039
+
+spring:
+  application:
+    name: @project.artifactId@
+
+retry:
+  maxAttempts: 5

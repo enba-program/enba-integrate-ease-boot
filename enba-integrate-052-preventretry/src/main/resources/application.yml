@@ -1,0 +1,20 @@
+server:
+  port: 8052
+
+spring:
+  application:
+    name: @project.artifactId@
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    database: 0
+    timeout: 5000
+
+enba:
+  request:
+    prevent-retry:
+      enabled: true
+      ttl: 1m
+      prevent-key: preventId
+

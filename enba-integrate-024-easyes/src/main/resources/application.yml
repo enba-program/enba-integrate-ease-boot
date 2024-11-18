@@ -1,0 +1,22 @@
+server:
+  port: 8024
+
+easy-es:
+  enable: true
+  address: 127.0.0.1:9200
+#  schema: https
+#  username: elastic
+#  password: WG7WVmuNMtM4GwNYkyWH
+  keep-alive-millis: 18000
+  global-config:
+    i-kun-mode: true
+    process-index-mode: smoothly
+    async-process-index-blocking: true
+    print-dsl: false
+    db-config:
+      map-underscore-to-camel-case: true
+      index-prefix: dev_
+      id-type: customize
+      field-strategy: not_empty
+      refresh-policy: immediate
+      enable-track-total-hits: true

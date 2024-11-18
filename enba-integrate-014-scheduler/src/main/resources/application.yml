@@ -1,0 +1,7 @@
+server:
+  port: 8014
+
+spring:
+  scheduler:
+    # 自定义属性 enabled 作为任务启动开关
+    enabled: false

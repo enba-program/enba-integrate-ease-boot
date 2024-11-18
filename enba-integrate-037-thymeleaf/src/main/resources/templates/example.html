@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Thymeleaf Example</title>
+</head>
+<body>
+<h1 th:text="${message}">Default message</h1>
+<p>Number: <span th:text="${number}">No number</span></p>
+<p>Flag: <span th:text="${flag ? 'True' : 'False'}">No flag</span></p>
+<p>Current Time: <span th:text="${#dates.format(now, 'yyyy-MM-dd HH:mm:ss')}">No date</span></p>
+
+<h2>Fruits List:</h2>
+<ul>
+  <li th:each="fruit : ${fruits}" th:text="${fruit}">No fruit</li>
+</ul>
+
+<h2>Colors Map:</h2>
+<ul>
+  <li th:each="color, status : ${colors}">
+    <span th:text="${status.index + 1}">Index</span>. <span th:text="${color.key}">Key</span>: <span
+      th:text="${color.value}">Value</span>
+  </li>
+</ul>
+
+<h2>Person Details:</h2>
+<p>Name: <span th:text="${person.name}">No name</span></p>
+<p>Age: <span th:text="${person.age}">No age</span></p>
+<p>Favorite Fruit: <span th:text="${person.favoriteFruit}">No favorite fruit</span></p>
+</body>
+</html>

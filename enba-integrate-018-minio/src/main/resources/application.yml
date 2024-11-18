@@ -1,0 +1,8 @@
+server:
+  port: 8018
+
+minio:
+  endpoint: http://localhost:9000
+  access-key: minioAccessKey
+  secret-key: minioSecretKey
+  bucket-name: mybucket

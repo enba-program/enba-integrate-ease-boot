@@ -1,0 +1,7 @@
+server:
+  port: 8019
+
+aliYun:
+  #  这俩是假的，需要替换成自己的
+  accessKeyId: jkjd5tF1N5M916scFk8ujkhn
+  accessKeySecret: 7hjghby6Ge37MpFPViEN8Q8ykmklnj

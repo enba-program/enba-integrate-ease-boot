@@ -1,0 +1,6 @@
+server:
+  port: 8051
+
+spring:
+  application:
+    name: @project.artifactId@

@@ -1,0 +1,21 @@
+server:
+  port: 8044
+
+spring:
+  application:
+    name: @project.artifactId@
+  datasource:
+    url: ENC(AYwMucPmOqGnJFOxSugA2H6otY/KbgnT1TTLCPcgwblTxnGbgGwuodbn8bMnbeZsDXUTNiO3edEm/+i3wOxEgtRaGiaUaQF+6N+wk3b2BYI=)
+    username: ENC(X7BhOgHbVvSodJswbfL6v4N+xNNIP4CrnRYWxluauTHqXXjgqgHLmusCa29HU099)
+    password: ENC(tij7RPkPEuduP7LlerSWlga4l89RLpWQIwy/HQkexW5TFs0ExChyt/F/1Aawx5T3)
+
+jasypt:
+  encryptor:
+    #  采用的加密算法
+    algorithm: PBEWITHHMACSHA512ANDAES_256
+    # 盐
+    password: 767676576hgjhgg
+    property:
+      prefix: ENC(
+      suffix: )
+    iv-generator-classname: org.jasypt.iv.RandomIvGenerator

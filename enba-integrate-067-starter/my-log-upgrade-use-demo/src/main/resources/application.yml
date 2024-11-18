@@ -1,0 +1,18 @@
+server:
+  port: 8067
+
+spring:
+  application:
+    name: @project.artifactId@
+  main:
+    allow-bean-definition-overriding: true
+
+log:
+  storage:
+    type: es
+
+#  log.storage.type=redis
+#  # 或者
+#  log.storage.type=mongodb
+#  # 或者
+#  log.storage.type=es

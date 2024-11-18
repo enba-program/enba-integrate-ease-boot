@@ -1,0 +1,13 @@
+server:
+  port: 8088
+
+#提供一份完成的spring-boot-starter-data-mongodb的配置
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/enba
+
+
+
+
+

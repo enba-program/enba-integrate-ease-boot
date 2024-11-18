@@ -1,0 +1,11 @@
+server:
+  port: 8047
+  undertow:
+    threads:
+      io: 2
+      worker: 8
+
+spring:
+  application:
+    name: @project.artifactId@
+

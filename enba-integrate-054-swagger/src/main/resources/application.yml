@@ -1,0 +1,9 @@
+server:
+  port: 8054
+
+spring:
+  application:
+    name: @project.artifactId@
+
+swagger:
+  version: @project.version@

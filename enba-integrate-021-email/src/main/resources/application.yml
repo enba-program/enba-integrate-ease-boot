@@ -1,0 +1,16 @@
+server:
+  port: 8021
+
+# application.yml 示例
+spring:
+  mail:
+    host: smtp.example.com
+    port: 587
+    username: myemail@example.com
+    password: mypassword
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true

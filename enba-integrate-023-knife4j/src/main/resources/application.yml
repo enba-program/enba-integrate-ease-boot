@@ -1,0 +1,32 @@
+server:
+  port: 8023
+
+spring:
+  application:
+    name: @project.artifactId@
+
+knife4j:
+  enable: true
+  documents:
+    - group: ${spring.application.name}
+      name: 测试自定义标题分组
+      locations: classpath:md/*.md
+  setting:
+    enableHomeCustom: true
+    homeCustomLocation: classpath:md/home.md
+    #是否显示Footer
+    enableFooter: false
+    #是否开启自定义Footer
+    enableFooterCustom: true
+    #自定义Footer内容
+    footerCustomContent: 恩爸编程
+  cors: false
+  production: false
+  basic:
+    enable: true
+    username: enba
+    password: 123456
+
+# 获取pom.xml中的信息
+app:
+  version: @project.version@

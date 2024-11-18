@@ -1,0 +1,14 @@
+server:
+  port: 8037
+
+spring:
+  application:
+    name: @project.artifactId@
+
+  thymeleaf:
+    #更改prefix对应的值可以改变Thymeleaf所访问的目录，但好像只能有一个目录。
+    prefix: classpath:/templates/
+    #访问文件类型
+    suffix: .html
+    #关闭缓存
+    cache: false

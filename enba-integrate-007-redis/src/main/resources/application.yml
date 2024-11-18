@@ -1,0 +1,34 @@
+server:
+  port: 8087
+
+#配置spring-boot-starter-data-redis的相关配置
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    database: 0
+    timeout: 5000
+#    配置Lettuce连接池
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1
+        time-between-eviction-runs: 1000
+        num-test-on-borrow: true
+        num-test-on-return: true
+        test-on-borrow: true
+        test-on-return: true
+        test-while-idle: true
+        time-between-eviction-runs-millis: 1000
+        min-evictable-idle-time-millis: 1000
+        max-evictable-idle-time-millis: 1000
+        num-tests-per-eviction-run: 10
+        block-when-exhausted: true
+        max-total: 8
+
+
+
+

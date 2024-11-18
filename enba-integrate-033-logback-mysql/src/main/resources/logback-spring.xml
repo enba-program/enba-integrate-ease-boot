@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<configuration debug="false" status="WARN">
+  <!--  <include resource="org/springframework/boot/logging/logback/defaults.xml"/>-->
+
+  <property name="LOG_CONTEXT_NAME" value="enba-integrate-031-logback"/>
+  <property name="LOG_HOME" value="../logs/${LOG_CONTEXT_NAME}"/>
+
+  <!--  控制台输出-->
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{56}.%method:%L - %msg%n
+      </pattern>
+    </encoder>
+  </appender>
+
+  <!-- 日志输出 MySQL -->
+  <appender name="MYSQL" class="ch.qos.logback.classic.db.DBAppender">
+    <connectionSource class="ch.qos.logback.core.db.DriverManagerConnectionSource">
+      <!--数据库驱动-->
+      <driverClass>com.mysql.cj.jdbc.Driver</driverClass>
+      <!--数据库 Url-->
+      <url>jdbc:mysql://localhost:3306/logback-mysql?characterEncoding=UTF-8</url>
+      <!--数据库用户名-->
+      <user>root</user>
+      <!--数据库密码-->
+      <password>123456</password>
+    </connectionSource>
+  </appender>
+
+  <!--  异步打印日志-->
+  <appender name="async-info" class="ch.qos.logback.classic.AsyncAppender">
+    <appender-ref ref="MYSQL"/>
+  </appender>
+
+  <!--  在 Logback 中，additivity 属性用于控制是否将日志事件传递给父 Logger。当一个 Logger 记录日志时，默认情况下它会将日志事件传递给它的父 Logger，这被称为“additivity”-->
+  <root level="info" additivity="false">
+    <appender-ref ref="STDOUT"/>
+    <appender-ref ref="async-info"/>
+  </root>
+</configuration>

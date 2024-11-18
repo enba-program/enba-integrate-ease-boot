@@ -1,0 +1,12 @@
+server:
+  port: 8053
+
+spring:
+  application:
+    name: @project.artifactId@
+
+enba:
+  redisson:
+    config: '{"singleServerConfig": {"address": "redis://localhost:6379","subscriptionConnectionPoolSize": 1,"connectionMinimumIdleSize": 5,"connectionPoolSize": 10}}'
+
+

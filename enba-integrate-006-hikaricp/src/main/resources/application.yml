@@ -1,0 +1,30 @@
+server:
+  port: 8086
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/demo?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    #    显示指定使用的连接池
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      connection-test-query: SELECT 1
+      connection-timeout: 30000
+      idle-timeout: 60000
+      max-lifetime: 1800000
+      minimum-idle: 10
+      maximum-pool-size: 10
+      pool-name: MyHikariCP
+      validation-timeout: 5000
+
+
+#mybatis-plus:
+#  #  global-config:
+#  #    db-config:
+#  #      id-type: auto
+#  #      logic-delete-value: 1
+#  #      logic-not-delete-value: 0
+#  mapper-locations: classpath*:mapper/*.xml
+#  type-aliases-package: com.enba.hikaricp.entity

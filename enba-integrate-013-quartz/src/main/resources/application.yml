@@ -1,0 +1,17 @@
+server:
+  port: 8013
+
+spring:
+  quartz:
+    wait-for-jobs-to-complete-on-shutdown: true
+    job-store-type: memory
+    startup-delay: 0
+    overwrite-existing-jobs: false
+    auto-startup: true
+    properties:
+      org:
+        quartz:
+          threadPool:
+            threadCount: 10
+            class: org.quartz.simpl.SimpleThreadPool
+            threadPriority: 5
